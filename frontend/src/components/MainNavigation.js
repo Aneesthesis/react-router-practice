@@ -18,7 +18,9 @@ function MainNavigation() {
           <li>
             <NavLink
               to="/events"
-              className={({ isActive }) => (isActive ? `underline` : undefined)}
+              className={({ isActive }) =>
+                isActive ? `underline decoration-red-500` : undefined
+              }
             >
               Events
             </NavLink>
