@@ -9,7 +9,9 @@ function MainNavigation() {
           <li>
             <NavLink
               to="/"
-              className={({ isActive }) => (isActive ? `underline` : undefined)}
+              className={({ isActive }) =>
+                isActive ? `font-extrabold` : undefined
+              }
               end
             >
               Home
@@ -19,7 +21,7 @@ function MainNavigation() {
             <NavLink
               to="/events"
               className={({ isActive }) =>
-                isActive ? `underline decoration-red-500` : undefined
+                isActive ? `font-extrabold` : undefined
               }
             >
               Events
