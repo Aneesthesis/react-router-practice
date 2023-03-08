@@ -8,7 +8,8 @@ import EventDetails from "./pages/EventDetails";
 import RootLayout from "./pages/Root";
 import EditEvent from "./pages/EditEvent";
 import EventsRootLayout from "./pages/EventsRoot";
-import { loader as eventsLoader } from "../src/pages/Events";
+import { loader as eventDetailLoader } from "../src/pages/Events";
+import ErrorPage from "./pages/Error";
 
 // 1. Add five new (dummy) page components (content can be simple <h1> elements)
 //    - HomePage
@@ -34,6 +35,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <RootLayout />,
+    errorElement: <ErrorPage />,
     children: [
       { index: true, element: <HomePage /> },
       {
@@ -43,7 +45,7 @@ const router = createBrowserRouter([
           {
             index: true,
             element: <Events />,
-            loader: eventsLoader,
+            loader: eventDetailLoader,
           },
           { path: ":eventId", element: <EventDetails /> }, //eventDetails
           { path: "newEvent", element: <NewEvent /> },
