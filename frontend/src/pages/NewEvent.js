@@ -1,7 +1,8 @@
 import React from "react";
+import EventForm from "../components/EventForm";
 
 function NewEvent() {
-  return <h1>Add New Event..</h1>;
+  return <EventForm method="post" />;
 }
 
 export default NewEvent;
